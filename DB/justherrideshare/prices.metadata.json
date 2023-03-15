@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"justherrideshare.prices"}],"uuid":"b718fbd1afe341d1bd79dbf2e6e5ca6a"}

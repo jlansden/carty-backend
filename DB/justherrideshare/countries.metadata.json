@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"justherrideshare.countries"}],"uuid":"fd4276a2dc9c422e8c12d6c81d7abf4c"}

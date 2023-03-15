@@ -1,0 +1,194 @@
+{
+    "LBL_MISSING_PARAMETERS": {
+        "NAME": {
+            "EN": "Missing Parameter"
+        },
+        "MESSAGE": {
+            "EN": "There are one or more parameters missing in the supplied request"
+        }
+    },
+    "LBL_INTERNAL_SERVER": {
+        "NAME": {
+            "EN": "Internal Server Error"
+        },
+        "MESSAGE": {
+            "EN": "Internal server error"
+        }
+    },
+    "LBL_USER_NOT_FOUND": {
+        "NAME": {
+            "EN": "User Not Found"
+        },
+        "MESSAGE": {
+            "EN": "This account has not been setup on the Just Her Rideshare"
+        }
+    },
+    "LBL_EMAIL_NOT_FOUND": {
+        "NAME": {
+            "EN": "Email Not Found"
+        },
+        "MESSAGE": {
+            "EN": "Email id does not exist"
+        }
+    },
+    "LBL_MOBILE_NOT_FOUND": {
+        "NAME": {
+            "EN": "Mobile Not Found"
+        },
+        "MESSAGE": {
+            "EN": "Mobile number does not exist"
+        }
+    },
+    "LBL_EMAIL_ALREADY_EXIST": {
+        "NAME": {
+            "EN": "Already exist"
+        },
+        "MESSAGE": {
+            "EN": "Email id already exist"
+        }
+    },
+    "LBL_MOBILE_ALREADY_EXIST": {
+        "NAME": {
+            "EN": "Already exist"
+        },
+        "MESSAGE": {
+            "EN": "Mobile number already exist"
+        }
+    },
+    "LBL_ACCOUNT_INACTIVE": {
+        "NAME": {
+            "EN": "Account Inactive"
+        },
+        "MESSAGE": {
+            "EN": "Your account is inactive, Contact to administrator"
+        }
+    },
+    "LBL_INVALID_OTP": {
+        "NAME": {
+            "EN": "Invalid OTP"
+        },
+        "MESSAGE": {
+            "EN": "Invalid OTP"
+        }
+    },
+    "LBL_HELP_CATEGORY_NOT_FOUND": {
+        "NAME": {
+            "EN": "Not Found"
+        },
+        "MESSAGE": {
+            "EN": "This help category not exists in Just Her Rideshare"
+        }
+    },
+    "LBL_TRIP_NOT_FOUND": {
+        "NAME": {
+            "EN": "Not Found"
+        },
+        "MESSAGE": {
+            "EN": "This trip ID not exists in Just Her Rideshare"
+        }
+    },
+    "LBL_PRICE_NOT_FOUND": {
+        "NAME": {
+            "EN": "Not Found"
+        },
+        "MESSAGE": {
+            "EN": "Price not added for related vehicle in Just Her Rideshare"
+        }
+    },
+    "LBL_ADDRESS_TYPE_EXISTS": {
+        "NAME": {
+            "EN": "Already exists"
+        },
+        "MESSAGE": {
+            "EN": "This address type already exists with other address"
+        }
+    },
+    "LBL_DISTANCE_NOT_FOUND": {
+        "NAME": {
+            "EN": "Not Found"
+        },
+        "MESSAGE": {
+            "EN": "Distance not found b/w start & finish address"
+        }
+    },
+    "LBL_NOT_DELETE_DEFAULT_CARD": {
+        "NAME": {
+            "EN": "Not Delete Default Card"
+        },
+        "MESSAGE": {
+            "EN": "You can not remove default card"
+        }
+    },
+    "LBL_CARD_NOT_FOUND": {
+        "NAME": {
+            "EN": "Card Not Found"
+        },
+        "MESSAGE": {
+            "EN": "You have not added any card, please add a card"
+        }
+    },
+    "LBL_VEHICLE_ALREADY_EXISTS": {
+        "NAME": {
+            "EN": "Already exists"
+        },
+        "MESSAGE": {
+            "EN": "Already you have added this vehicle"
+        }
+    },
+    "LBL_VEHICLE_NOT_FOUND": {
+        "NAME": {
+            "EN": "not found"
+        },
+        "MESSAGE": {
+            "EN": "This vehicle not exists in Just Her Rideshare"
+        }
+    },
+    "LBL_DRIVER_NOT_AVAILABLE_FOR_TRIP": {
+        "NAME": {
+            "EN": "Not available"
+        },
+        "MESSAGE": {
+            "EN": "Currently there are no drivers available for this trip request."
+        }
+    },
+    "LBL_ONGOING_JOB_NOT_FOUND": {
+        "NAME": {
+            "EN": "Not found"
+        },
+        "MESSAGE": {
+            "EN": "There are no any trips in ongoing."
+        }
+    },
+    "LBL_TRIP_ALREADY_ACCEPT": {
+        "NAME": {
+            "EN": "Already accept"
+        },
+        "MESSAGE": {
+            "EN": "This trip is already accepted by another driver."
+        }
+    },
+    "LBL_TRIP_ALREADY_PICKUP": {
+        "NAME": {
+            "EN": "Already pickup"
+        },
+        "MESSAGE": {
+            "EN": "This trip is already pickedup."
+        }
+    },
+    "LBL_TRIP_ALREADY_START": {
+        "NAME": {
+            "EN": "Already start"
+        },
+        "MESSAGE": {
+            "EN": "This trip is already started."
+        }
+    },
+    "LBL_TRIP_CAN_NOT_CANCEL": {
+        "NAME": {
+            "EN": "can not cancel"
+        },
+        "MESSAGE": {
+            "EN": "You can not cancel this trip bcoz trip is in process"
+        }
+    }
+}

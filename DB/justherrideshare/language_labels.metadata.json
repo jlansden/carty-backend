@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"justherrideshare.language_labels"}],"uuid":"c2ef45f011ce4fd98b4f903662330cb8"}

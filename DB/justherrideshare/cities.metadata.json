@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"justherrideshare.cities"}],"uuid":"3027d1a9357c43acb47a42478e948dc8"}

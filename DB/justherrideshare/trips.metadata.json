@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"justherrideshare.trips"}],"uuid":"51cedbc6d76b469993f3fd0dee9f6cf6"}

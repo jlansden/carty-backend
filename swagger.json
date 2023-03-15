@@ -1,0 +1,2685 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Just Her Rideshare",
+        "description": "Just Her Rideshare",
+        "contact": {
+            "name": "Smart Data Team"
+        }
+    },
+    "paths": {
+        "/language/list": {
+            "get": {
+                "x-controller-name": "Language",
+                "x-operation-name": "getLanguageList",
+                "tags": ["Language"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "GetLanguage List",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "Language.getLanguageList"
+            }
+        },
+        "/label/list": {
+            "get": {
+                "x-controller-name": "Language",
+                "x-operation-name": "getLanguageLabelList",
+                "tags": ["Language"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "GetLanguage Label List",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "type",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "Language.getLanguageLabelList"
+            }
+        },
+
+        "/state/list": {
+            "get": {
+                "x-controller-name": "StateController",
+                "x-operation-name": "List",
+                "tags": ["StateController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "List",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "StateController.List"
+            }
+        },
+
+        "/city/list": {
+            "get": {
+                "x-controller-name": "CityController",
+                "x-operation-name": "List",
+                "tags": ["CityController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "List",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "state_id",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "CityController.List"
+            }
+        },
+
+        "/year/list": {
+            "get": {
+                "x-controller-name": "YearController",
+                "x-operation-name": "List",
+                "tags": ["YearController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "List",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "YearController.List"
+            }
+        },
+
+        "/settings/list": {
+            "get": {
+                "x-controller-name": "Settings",
+                "x-operation-name": "GetList",
+                "tags": ["Settings"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "GetList",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "Settings.GetList"
+            }
+        },
+
+        "/cms/list": {
+            "get": {
+                "x-controller-name": "CMS",
+                "x-operation-name": "GetCMSList",
+                "tags": ["CMS"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "GetCMSList",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "type",
+                    "in": "query",
+                    "schema": {
+                        "type": "string",
+                        "enum": ["customer", "driver"]
+                    }
+                }],
+                "operationId": "CMS.GetCMSList"
+            }
+        },
+
+        "/help-category/list": {
+            "get": {
+                "x-controller-name": "Help",
+                "x-operation-name": "getHelpCategories",
+                "tags": ["Help"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "getHelpCategories",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "type",
+                    "in": "query",
+                    "schema": {
+                        "type": "string",
+                        "enum": ["customer", "driver"]
+                    }
+                }],
+                "operationId": "Help.getHelpCategories"
+            }
+        },
+        "/help/list": {
+            "get": {
+                "x-controller-name": "Help",
+                "x-operation-name": "getHelp",
+                "tags": ["Help"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "getHelp",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "help_category_id",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "Help.getHelp"
+            }
+        },
+
+        "/auth/check-email-mobile-exists": {
+            "post": {
+                "x-controller-name": "AuthController",
+                "x-operation-name": "CheckEMailMobileExist",
+                "tags": ["AuthController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "CheckEMailMobileExist",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "mobile_country_code": {
+                                        "type": "string"
+                                    },
+                                    "mobile": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "user_type": {
+                                        "type": "string",
+                                        "enum": ["customer", "driver"]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "AuthController.CheckEMailMobileExist"
+            }
+        },
+        "/auth/sign-in": {
+            "post": {
+                "x-controller-name": "AuthController",
+                "x-operation-name": "signIn",
+                "tags": ["AuthController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "signIn",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "mobile": {
+                                        "type": "string"
+                                    },
+                                    "mobile_country_code": {
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "type": "string"
+                                    },
+                                    "user_type": {
+                                        "type": "string",
+                                        "enum": ["customer", "driver"]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "AuthController.signIn"
+            }
+        },
+        "/auth/sign-up": {
+            "post": {
+                "x-controller-name": "AuthController",
+                "x-operation-name": "SignUp",
+                "tags": ["AuthController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "SignUp",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "mobile": {
+                                        "type": "string"
+                                    },
+                                    "mobile_country_code": {
+                                        "type": "string"
+                                    },
+                                    "profile_picture": {
+                                        "type": "file",
+                                        "description": "As a multipart"
+                                    },
+                                    "user_type": {
+                                        "type": "string",
+                                        "enum": ["customer", "driver"]
+                                    },
+                                    "gender": {
+                                        "type": "string",
+                                        "enum": ["male", "female"]
+                                    },
+                                    "state_id": {
+                                        "type": "string"
+                                    },
+                                    "city_id": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "AuthController.SignUp"
+            }
+        },
+        "/auth/verify-otp": {
+            "post": {
+                "x-controller-name": "AuthController",
+                "x-operation-name": "VerifyOTPLogin",
+                "tags": ["AuthController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "VerifyOTPLogin",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "user_type": {
+                                        "type": "string"
+                                    },
+                                    "user_id": {
+                                        "type": "string"
+                                    },
+                                    "otp": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "AuthController.VerifyOTPLogin"
+            }
+        },
+        "/auth/resend-otp": {
+            "post": {
+                "x-controller-name": "AuthController",
+                "x-operation-name": "ResendOtpLogin",
+                "tags": ["AuthController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "ResendOtpLogin",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "user_type": {
+                                        "type": "string"
+                                    },
+                                    "user_id": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "AuthController.ResendOtpLogin"
+            }
+        },
+        "/auth/verify-mobile": {
+            "post": {
+                "x-controller-name": "AuthController",
+                "x-operation-name": "VerifyMobile",
+                "tags": ["AuthController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "VerifyMobile",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "verify_mobile_id": {
+                                        "type": "string"
+                                    },
+                                    "otp": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "AuthController.VerifyMobile"
+            }
+        },
+        "/auth/resend-otp-verify-mobile": {
+            "post": {
+                "x-controller-name": "AuthController",
+                "x-operation-name": "ResendOtpVerifyMobile",
+                "tags": ["AuthController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "ResendOtpVerifyMobile",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "verify_mobile_id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "AuthController.ResendOtpVerifyMobile"
+            }
+        },
+        "/auth/logout-delete-account": {
+            "get": {
+                "x-controller-name": "AuthController",
+                "x-operation-name": "LogoutDelete",
+                "tags": ["AuthController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "LogoutDelete",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "user_type",
+                    "in": "query",
+                    "schema": {
+                        "type": "string",
+                        "enum": ["customer", "driver"]
+                    }
+                }, {
+                    "name": "action",
+                    "in": "query",
+                    "schema": {
+                        "type": "string",
+                        "enum": ["logout", "delete"]
+                    }
+                }, {
+                    "name": "user_id",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "AuthController.LogoutDelete"
+            }
+        },
+        "/auth/get-profile": {
+            "get": {
+                "x-controller-name": "AuthController",
+                "x-operation-name": "GetProfile",
+                "tags": ["AuthController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "GetProfile",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "user_id",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "user_type",
+                    "in": "query",
+                    "schema": {
+                        "type": "string",
+                        "enum": ["customer", "driver"]
+                    }
+                }],
+                "operationId": "AuthController.GetProfile"
+            }
+        },
+        "/auth/update-profile": {
+            "post": {
+                "x-controller-name": "AuthController",
+                "x-operation-name": "UpdateProfile",
+                "tags": ["AuthController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "UpdateProfile",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "user_id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "user_type": {
+                                        "type": "string",
+                                        "enum": ["customer", "driver"]
+                                    },
+                                    "profile_picture": {
+                                        "type": "file",
+                                        "description": "file as a multipart"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "AuthController.UpdateProfile"
+            }
+        },
+        "/auth/account-setup": {
+            "post": {
+                "x-controller-name": "AuthController",
+                "x-operation-name": "AccountSetup",
+                "tags": ["AuthController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "AccountSetup",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "user_id": {
+                                        "type": "string"
+                                    },
+                                    "is_legal_aggrement": {
+                                        "type": "boolean",
+                                        "description": "While pass when user complete legal aggreement"
+                                    },
+                                    "profile_picture": {
+                                        "type": "file",
+                                        "description": "While pass when user complete profile picture"
+                                    },
+                                    "driving_licence": {
+                                        "type": "file",
+                                        "description": "While pass when user complete driving licence"
+                                    },
+                                    "vehicle_insurance": {
+                                        "type": "file",
+                                        "description": "While pass when user complete vehicle insurance"
+                                    },
+                                    "vehicle_registration": {
+                                        "type": "file",
+                                        "description": "While pass when user complete vehicle registration"
+                                    },
+                                    "certificate_of_completion": {
+                                        "type": "file",
+                                        "description": "While pass when user have completion certificate"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "AuthController.AccountSetup"
+            }
+        },
+        "/auth/update-player-id": {
+            "post": {
+                "x-controller-name": "AuthController",
+                "x-operation-name": "UpdatePlayerId",
+                "tags": ["AuthController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "UpdatePlayerId",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "user_id": {
+                                        "type": "string"
+                                    },
+                                    "user_type": {
+                                        "type": "string",
+                                        "enum": ["customer", "driver"]
+                                    },
+                                    "player_id": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "AuthController.UpdatePlayerId"
+            }
+        },
+
+        "/customer/address": {
+            "post": {
+                "x-controller-name": "CustomerController",
+                "x-operation-name": "ManageAddress",
+                "tags": ["CustomerController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "ManageAddress",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "customer_id": {
+                                        "type": "string"
+                                    },
+                                    "action": {
+                                        "type": "string",
+                                        "enum": ["get", "add", "delete"]
+                                    },
+                                    "address_type": {
+                                        "type": "string",
+                                        "enum": ["home", "work"]
+                                    },
+                                    "address": {
+                                        "type": "string"
+                                    },
+                                    "latitude": {
+                                        "type": "number"
+                                    },
+                                    "longitude": {
+                                        "type": "number"
+                                    },
+                                    "address_id": {
+                                        "type": "string",
+                                        "description": "Pass only while using edit or delete address"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "CustomerController.ManageAddress"
+            }
+        },
+        "/customer/cancel-trip": {
+            "post": {
+                "x-controller-name": "CustomerController",
+                "x-operation-name": "CancelTrip",
+                "tags": ["CustomerController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "CancelTrip",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "customer_id": {
+                                        "type": "string"
+                                    },
+                                    "trip_id": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "CustomerController.CancelTrip"
+            }
+        },
+        "/customer/sync-contact": {
+            "post": {
+                "x-controller-name": "CustomerController",
+                "x-operation-name": "SyncConacts",
+                "tags": ["CustomerController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "SyncConacts",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "customer_id": {
+                                        "type": "string"
+                                    },
+                                    "contacts": {
+                                        "type": "string",
+                                        "description": "pass value as a comma seprate like -> 132,123,456"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "CustomerController.SyncConacts"
+            }
+        },
+        "/customer/share-trip": {
+            "post": {
+                "x-controller-name": "CustomerController",
+                "x-operation-name": "ShareTrip",
+                "tags": ["CustomerController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "ShareTrip",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "customer_id": {
+                                        "type": "string"
+                                    },
+                                    "trip_id": {
+                                        "type": "string"
+                                    },
+                                    "share_ids": {
+                                        "type": "string",
+                                        "description": "pass customer_id as a comma seprate like -> CUS132,CUS123,CUS456"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "CustomerController.ShareTrip"
+            }
+        },
+        "/customer/get-shared-trip": {
+            "get": {
+                "x-controller-name": "CustomerController",
+                "x-operation-name": "GetSharedTrips",
+                "tags": ["CustomerController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "GetSharedTrips",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "customer_id",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "CustomerController.GetSharedTrips"
+            }
+        },
+        "/customer/rate-the-trip": {
+            "get": {
+                "x-controller-name": "CustomerController",
+                "x-operation-name": "RateTheTrip",
+                "tags": ["CustomerController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "RateTheTrip",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "page",
+                    "in": "query",
+                    "schema": {
+                        "type": "number"
+                    }
+                }, {
+                    "name": "customer_id",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "CustomerController.RateTheTrip"
+            }
+        },
+
+        "/preference/list": {
+            "get": {
+                "x-controller-name": "Preference",
+                "x-operation-name": "List",
+                "tags": ["Preference"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "List",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "Preference.List"
+            }
+        },
+
+        "/vehicle/list": {
+            "get": {
+                "x-controller-name": "Vehicle",
+                "x-operation-name": "List",
+                "tags": ["Vehicle"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "List",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "customer_id",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "start_address",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "finish_address",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "start_latitude",
+                    "in": "query",
+                    "schema": {
+                        "type": "number"
+                    }
+                }, {
+                    "name": "start_longitude",
+                    "in": "query",
+                    "schema": {
+                        "type": "number"
+                    }
+                }, {
+                    "name": "finish_latitude",
+                    "in": "query",
+                    "schema": {
+                        "type": "number"
+                    }
+                }, {
+                    "name": "finish_longitude",
+                    "in": "query",
+                    "schema": {
+                        "type": "number"
+                    }
+                }],
+                "operationId": "Vehicle.List"
+            }
+        },
+        "/vehicle/list-driver": {
+            "get": {
+                "x-controller-name": "Vehicle",
+                "x-operation-name": "ListDriver",
+                "tags": ["Vehicle"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "ListDriver",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "Vehicle.ListDriver"
+            }
+        },
+
+        "/card/list": {
+            "get": {
+                "x-controller-name": "CardController",
+                "x-operation-name": "GetList",
+                "tags": ["CardController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "GetList",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "customer_id",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "CardController.GetList"
+            }
+        },
+        "/card/add": {
+            "post": {
+                "x-controller-name": "CardController",
+                "x-operation-name": "AddCard",
+                "tags": ["CardController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "AddCard",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "customer_id": {
+                                        "type": "string"
+                                    },
+                                    "card_name": {
+                                        "type": "string"
+                                    },
+                                    "card_number": {
+                                        "type": "string"
+                                    },
+                                    "exp_month": {
+                                        "type": "string"
+                                    },
+                                    "exp_year": {
+                                        "type": "string"
+                                    },
+                                    "cvc": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "CardController.AddCard"
+            }
+        },
+        "/card/remove": {
+            "post": {
+                "x-controller-name": "CardController",
+                "x-operation-name": "DeleteCard",
+                "tags": ["CardController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "DeleteCard",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "customer_id": {
+                                        "type": "string"
+                                    },
+                                    "card_id": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "CardController.DeleteCard"
+            }
+        },
+        "/card/set-default": {
+            "post": {
+                "x-controller-name": "CardController",
+                "x-operation-name": "DefaultCard",
+                "tags": ["CardController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "DefaultCard",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "customer_id": {
+                                        "type": "string"
+                                    },
+                                    "card_id": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "CardController.DefaultCard"
+            }
+        },
+
+        "/driver/vehicle-management": {
+            "post": {
+                "x-controller-name": "DriverController",
+                "x-operation-name": "VehicleManagement",
+                "tags": ["DriverController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "VehicleManagement",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "driver_id": {
+                                        "type": "string"
+                                    },
+                                    "action": {
+                                        "type": "string",
+                                        "enum": ["get", "add", "delete", "set_default"]
+                                    },
+                                    "vehicle_id": {
+                                        "type": "string",
+                                        "description": "Only for add, delete, set_default"
+                                    },
+                                    "vehicle_number": {
+                                        "type": "string",
+                                        "description": "Only for add"
+                                    },
+                                    "model_id": {
+                                        "type": "string",
+                                        "description": "Only for add"
+                                    },
+                                    "make_id": {
+                                        "type": "string",
+                                        "description": "Only for add"
+                                    },
+                                    "year": {
+                                        "type": "string",
+                                        "description": "Only for add"
+                                    },
+                                    "insurance_covernote": {
+                                        "type": "file",
+                                        "description": "Only for add"
+                                    },
+                                    "front_photo": {
+                                        "type": "file",
+                                        "description": "Only for add"
+                                    },
+                                    "rear_photo": {
+                                        "type": "file",
+                                        "description": "Only for add"
+                                    },
+                                    "left_photo": {
+                                        "type": "file",
+                                        "description": "Only for add"
+                                    },
+                                    "right_photo": {
+                                        "type": "file",
+                                        "description": "Only for add"
+                                    },
+                                    "mode_id": {
+                                        "type": "file",
+                                        "description": "Only for add"
+                                    },
+                                    "music_id": {
+                                        "type": "file",
+                                        "description": "Only for add"
+                                    },
+                                    "temperature": {
+                                        "type": "file",
+                                        "description": "Only for add"
+                                    },
+                                    "accessible_id": {
+                                        "type": "file",
+                                        "description": "Only for add"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "DriverController.VehicleManagement"
+            }
+        },
+        "/driver/details": {
+            "get": {
+                "x-controller-name": "DriverController",
+                "x-operation-name": "Details",
+                "tags": ["DriverController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Details",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "driver_id",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "DriverController.Details"
+            }
+        },
+        "/driver/finance": {
+            "get": {
+                "x-controller-name": "DriverController",
+                "x-operation-name": "Finance",
+                "tags": ["DriverController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Finance",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "driver_id",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "start_date",
+                    "in": "query",
+                    "schema": {
+                        "type": "string",
+                        "description": "Format YYYY-MM-DD"
+                    }
+                }, {
+                    "name": "end_date",
+                    "in": "query",
+                    "schema": {
+                        "type": "string",
+                        "description": "Format YYYY-MM-DD"
+                    }
+                }],
+                "operationId": "DriverController.Finance"
+            }
+        },
+         "/driver/online-offline": {
+            "post": {
+                "x-controller-name": "DriverController",
+                "x-operation-name": "OnlineOffline",
+                "tags": ["DriverController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OnlineOffline",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "driver_id": {
+                                        "type": "string"
+                                    },
+                                    "action": {
+                                        "type": "string",
+                                        "enum": ["offline", "online"]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "DriverController.OnlineOffline"
+            }
+        },
+
+        "/trip/book": {
+            "post": {
+                "x-controller-name": "TripController",
+                "x-operation-name": "Book",
+                "tags": ["TripController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Book",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "customer_id": {
+                                        "type": "string"
+                                    },
+                                    "card_id": {
+                                        "type": "string"
+                                    },
+                                    "vehicle_id": {
+                                        "type": "string"
+                                    },
+                                    "start_address": {
+                                        "type": "string"
+                                    },
+                                    "start_latitude": {
+                                        "type": "number"
+                                    },
+                                    "start_longitude": {
+                                        "type": "number"
+                                    },
+                                    "finish_address": {
+                                        "type": "string"
+                                    },
+                                    "finish_latitude": {
+                                        "type": "number"
+                                    },
+                                    "finish_longitude": {
+                                        "type": "number"
+                                    },
+                                    "total_distance": {
+                                        "type": "number"
+                                    },
+                                    "total_duration": {
+                                        "type": "number"
+                                    },
+                                    "formatted_distance": {
+                                        "type": "string"
+                                    },
+                                    "formatted_duration": {
+                                        "type": "string"
+                                    },
+                                    "preferences": {
+                                        "type": "object"
+                                    },
+                                    "fare_info": {
+                                        "type": "object"
+                                    },
+                                    "total": {
+                                        "type": "number"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "TripController.Book"
+            }
+        },
+        "/trip/ongoing": {
+            "get": {
+                "x-controller-name": "TripController",
+                "x-operation-name": "OngoingTrip",
+                "tags": ["TripController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OngoingTrip",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "user_type",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "user_id",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "TripController.OngoingTrip"
+            }
+        },
+        "/trip/action": {
+            "post": {
+                "x-controller-name": "TripController",
+                "x-operation-name": "Action",
+                "tags": ["TripController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Action",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "action": {
+                                        "type": "string",
+                                        "enum": ["accept", "reject", "pickup", "start", "complete"]
+                                    },
+                                    "driver_id": {
+                                        "type": "string"
+                                    },
+                                    "trip_id": {
+                                        "type": "string"
+                                    },
+                                    "toll_charge": {
+                                        "type": "number",
+                                        "description": "Optional=> pass when action=complete and if driver add"
+                                    },
+                                    "cleaning_charge": {
+                                        "type": "number",
+                                        "description": "Optional=> pass when action=complete and if driver add"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "TripController.Action"
+            }
+        },
+        "/trip/cancel": {
+            "post": {
+                "x-controller-name": "TripController",
+                "x-operation-name": "Cancel",
+                "tags": ["TripController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Cancel",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "customer_id": {
+                                        "type": "string"
+                                    },
+                                    "trip_id": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "TripController.Cancel"
+            }
+        },
+        "/trip/receipt": {
+            "get": {
+                "x-controller-name": "TripController",
+                "x-operation-name": "Receipt",
+                "tags": ["TripController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Receipt",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "trip_id",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "TripController.Receipt"
+            }
+        },
+        "/trip/rating": {
+            "post": {
+                "x-controller-name": "TripController",
+                "x-operation-name": "Rating",
+                "tags": ["TripController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Rating",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "user_type": {
+                                        "type": "string",
+                                        "enum": ["customer", "driver"]
+                                    },
+                                    "user_id": {
+                                        "type": "string"
+                                    },
+                                    "trip_id": {
+                                        "type": "string"
+                                    },
+                                    "rating": {
+                                        "type": "number"
+                                    },
+                                    "comment": {
+                                        "type": "number",
+                                        "description": "Optional"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "TripController.rating"
+            }
+        },
+        "/trip/history": {
+            "get": {
+                "x-controller-name": "TripController",
+                "x-operation-name": "History",
+                "tags": ["TripController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "History",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "page",
+                    "in": "query",
+                    "schema": {
+                        "type": "number"
+                    }
+                }, {
+                    "name": "user_type",
+                    "in": "query",
+                    "schema": {
+                        "type": "string",
+                        "enum": ["customer", "driver"]
+                    }
+                }, {
+                    "name": "user_id",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "status",
+                    "in": "query",
+                    "description": "pass while user_type==driver",
+                    "schema": {
+                        "type": "string",
+                        "enum": ["completed", "canceled"]
+                    }
+                }],
+                "operationId": "TripController.History"
+            }
+        },
+        "/trip/dispute": {
+            "post": {
+                "x-controller-name": "TripController",
+                "x-operation-name": "Dispute",
+                "tags": ["TripController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Dispute",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "customer_id": {
+                                        "type": "string"
+                                    },
+                                    "trip_id": {
+                                        "type": "string"
+                                    },
+                                    "dispute_msg": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "TripController.Dispute"
+            }
+        },
+        "/trip/lost-item": {
+            "post": {
+                "x-controller-name": "TripController",
+                "x-operation-name": "LostItem",
+                "tags": ["TripController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "LostItem",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "customer_id": {
+                                        "type": "string"
+                                    },
+                                    "trip_id": {
+                                        "type": "string"
+                                    },
+                                    "msg": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "TripController.LostItem"
+            }
+        },
+        "/trip/toll-charge": {
+            "post": {
+                "x-controller-name": "TripController",
+                "x-operation-name": "TollCharge",
+                "tags": ["TripController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "TollCharge",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "driver_id": {
+                                        "type": "string"
+                                    },
+                                    "trip_id": {
+                                        "type": "string"
+                                    },
+                                    "toll_charge": {
+                                        "type": "number"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "TripController.TollCharge"
+            }
+        },
+        "/trip/cleaning-charge": {
+            "post": {
+                "x-controller-name": "TripController",
+                "x-operation-name": "CleaningCharge",
+                "tags": ["TripController"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "CleaningCharge",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "driver_id": {
+                                        "type": "string"
+                                    },
+                                    "trip_id": {
+                                        "type": "string"
+                                    },
+                                    "cleaning_charge": {
+                                        "type": "number"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "TripController.CleaningCharge"
+            }
+        },
+
+        "/notification/list": {
+            "get": {
+                "x-controller-name": "Notification",
+                "x-operation-name": "List",
+                "tags": ["Notification"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "List",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "user_id",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "Notification.List"
+            }
+        },
+        "/notification/delete": {
+            "get": {
+                "x-controller-name": "Notification",
+                "x-operation-name": "Delete",
+                "tags": ["Notification"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Delete",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "user_id",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "Notification.Delete"
+            }
+        },
+
+        "/emergency/list": {
+            "get": {
+                "x-controller-name": "Emergency",
+                "x-operation-name": "List",
+                "tags": ["Emergency"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "List",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "customer_id",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "Emergency.List"
+            }
+        },
+        "/emergency/add": {
+            "post": {
+                "x-controller-name": "Emergency",
+                "x-operation-name": "Add",
+                "tags": ["Emergency"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Add",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "customer_id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "mobile_country_code": {
+                                        "type": "string"
+                                    },
+                                    "mobile": {
+                                        "type": "string"
+                                    },
+                                    "profile_picture": {
+                                        "type": "file"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "Emergency.Add"
+            }
+        },
+        "/emergency/delete": {
+            "post": {
+                "x-controller-name": "Emergency",
+                "x-operation-name": "Delete",
+                "tags": ["Emergency"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Delete",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "customer_id": {
+                                        "type": "string"
+                                    },
+                                    "contact_id": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "Emergency.Delete"
+            }
+        },
+        "/emergency/edit": {
+            "post": {
+                "x-controller-name": "Emergency",
+                "x-operation-name": "Edit",
+                "tags": ["Emergency"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Edit",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "customer_id": {
+                                        "type": "string"
+                                    },
+                                    "contact_id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "mobile_country_code": {
+                                        "type": "string"
+                                    },
+                                    "mobile": {
+                                        "type": "string"
+                                    },
+                                    "profile_picture": {
+                                        "type": "file"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "operationId": "Emergency.Edit"
+            }
+        },
+
+        "/common/maker-list": {
+            "get": {
+                "x-controller-name": "MakeModel",
+                "x-operation-name": "MakerList",
+                "tags": ["MakeModel"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "MakerList",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "MakeModel.MakerList"
+            }
+        },
+        "/common/model-list": {
+            "get": {
+                "x-controller-name": "MakeModel",
+                "x-operation-name": "ModelList",
+                "tags": ["MakeModel"],
+                "security": [{
+                    "jwt": []
+                }],
+                "responses": {
+                    "200": {
+                        "description": "ModelList",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [{
+                    "name": "code",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "make_id",
+                    "in": "query",
+                    "schema": {
+                        "type": "string"
+                    }
+                }],
+                "operationId": "MakeModel.ModelList"
+            }
+        }
+    },
+    "components": {},
+    "servers": [{
+        "url": "http://52.70.114.84:9133/api"
+    }, {
+        "url": "http://localhost:9133/api"
+    }]
+}
